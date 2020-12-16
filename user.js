@@ -943,7 +943,7 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
  * Firefox's Autoplay Policy Documentation [PDF] is linked below via SUMO
  * [NOTE] If you have trouble with some video sites, then add an exception (see 2030)
  * [1] https://support.mozilla.org/questions/1293231 ***/
-user_pref("media.autoplay.blocking_policy", 2);
+user_pref("media.autoplay.blocking_policy", 0);
 
 /*** [SECTION 2200]: WINDOW MEDDLING & LEAKS / POPUPS ***/
 user_pref("_user.js.parrot", "2200 syntax error: the parrot's 'istory!");

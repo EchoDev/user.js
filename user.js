@@ -1455,18 +1455,18 @@ user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs")
  * [SETUP-WEB] RFP can cause the odd website to break in strange ways, and has a few side affects,
  * but is largely robust nowadays. Give it a try. Your choice. Also see 4504 (letterboxing).
  * [1] https://bugzilla.mozilla.org/418986 ***/
-user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting", false);
 /* 4502: set new window sizes to round to hundreds [FF55+] [SETUP-CHROME]
  * Width will round down to multiples of 200s and height to 100s, to fit your screen.
  * The override values are a starting point to round from if you want some control
- * [1] https://bugzilla.mozilla.org/1330882 ***/
+ * [1] https://bugzilla.mozilla.org/1330882
    // user_pref("privacy.window.maxInnerWidth", 1000);
    // user_pref("privacy.window.maxInnerHeight", 1000);
-/* 4503: disable mozAddonManager Web API [FF57+]
+ * 4503: disable mozAddonManager Web API [FF57+]
  * [NOTE] To allow extensions to work on AMO, you also need 2662
- * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
+ * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF]
-/* 4504: enable RFP letterboxing [FF67+]
+ * 4504: enable RFP letterboxing [FF67+]
  * Dynamically resizes the inner window by applying margins in stepped ranges [2]
  * If you use the dimension pref, then it will only apply those resolutions. The format is
  * "width1xheight1, width2xheight2, ..." (e.g. "800x600, 1000x1000, 1600x900")
@@ -1474,16 +1474,16 @@ user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDE
  * dislike margins being applied, then flip this pref, keeping in mind that it is effectively fingerprintable
  * [WARNING] The dimension pref is only meant for testing, and we recommend you DO NOT USE it
  * [1] https://bugzilla.mozilla.org/1407366
- * [2] https://hg.mozilla.org/mozilla-central/rev/6d2d7856e468#l2.32 ***/
+ * [2] https://hg.mozilla.org/mozilla-central/rev/6d2d7856e468#l2.32
 user_pref("privacy.resistFingerprinting.letterboxing", true); // [HIDDEN PREF]
    // user_pref("privacy.resistFingerprinting.letterboxing.dimensions", ""); // [HIDDEN PREF]
-/* 4510: disable showing about:blank as soon as possible during startup [FF60+]
+ * 4510: disable showing about:blank as soon as possible during startup [FF60+]
  * When default true this no longer masks the RFP chrome resizing activity
- * [1] https://bugzilla.mozilla.org/1448423 ***/
+ * [1] https://bugzilla.mozilla.org/1448423
 user_pref("browser.startup.blankWindow", false);
-/* 4520: disable chrome animations [FF77+] [RESTART]
- * [NOTE] pref added in FF63, but applied to chrome in FF77. RFP spoofs this for web content ***/
-user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]
+ * 4520: disable chrome animations [FF77+] [RESTART]
+ * [NOTE] pref added in FF63, but applied to chrome in FF77. RFP spoofs this for web content 
+user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]***/
 
 /*** [SECTION 4600]: RFP ALTERNATIVES
      [WARNING] Do NOT use prefs in this section with RFP as they can interfere

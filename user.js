@@ -667,7 +667,7 @@ user_pref("security.ssl.enable_ocsp_stapling", true);
  * It's a trade-off between security (checking) and privacy (leaking info to the CA)
  * [NOTE] This pref only controls OCSP fetching and does not affect OCSP stapling
  * [1] https://en.wikipedia.org/wiki/Ocsp ***/
-user_pref("security.OCSP.enabled", 1);
+user_pref("security.OCSP.enabled", 0);
 /* 1212: set OCSP fetch failures (non-stapled, see 1211) to hard-fail [SETUP-WEB]
  * When a CA cannot be reached to validate a cert, Firefox just continues the connection (=soft-fail)
  * Setting this pref to true tells Firefox to instead terminate the connection (=hard-fail)

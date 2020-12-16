@@ -1030,12 +1030,12 @@ user_pref("_user.js.parrot", "2400 syntax error: the parrot's kicked the bucket!
 /* 2404: disable clipboard commands (cut/copy) from "non-privileged" content [FF41+]
  * this disables document.execCommand("cut"/"copy") to protect your clipboard
  * [1] https://bugzilla.mozilla.org/1170911 ***/
-user_pref("dom.allow_cut_copy", false);
+user_pref("dom.allow_cut_copy", true);
 /* 2405: disable "Confirm you want to leave" dialog on page close
  * Does not prevent JS leaks of the page close event.
  * [1] https://developer.mozilla.org/docs/Web/Events/beforeunload
  * [2] https://support.mozilla.org/questions/1043508 ***/
-user_pref("dom.disable_beforeunload", true);
+user_pref("dom.disable_beforeunload", false);
 /* 2414: disable shaking the screen ***/
 user_pref("dom.vibrator.enabled", false);
 /* 2420: disable asm.js [FF22+] [SETUP-PERF]

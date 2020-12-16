@@ -1489,7 +1489,7 @@ user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]***/
      [WARNING] Do NOT use prefs in this section with RFP as they can interfere
 ***/
 user_pref("_user.js.parrot", "4600 syntax error: the parrot's crossed the Jordan");
-/* [SETUP-non-RFP] Non-RFP users replace the * with a slash on this line to enable these
+// [SETUP-non-RFP] Non-RFP users replace the * with a slash on this line to enable these
 // FF55+
 // 4601: [2514] spoof (or limit?) number of CPU cores [FF48+]
    // [NOTE] *may* affect core chrome/Firefox performance, will affect content.
@@ -1519,7 +1519,7 @@ user_pref("browser.zoom.siteSpecific", false);
 // 4606: [2501] disable gamepad API - USB device ID enumeration
    // Optional protection depending on your connected devices
    // [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/13023
-   // user_pref("dom.gamepad.enabled", false);
+user_pref("dom.gamepad.enabled", false);
 // 4607: [2503] disable giving away network info [FF31+]
    // e.g. bluetooth, cellular, ethernet, wifi, wimax, other, mixed, unknown, none
    // [1] https://developer.mozilla.org/docs/Web/API/Network_Information_API

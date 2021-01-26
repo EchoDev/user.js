@@ -565,8 +565,8 @@ user_pref("_user.js.parrot", "1000 syntax error: the parrot's gone to meet 'is m
 user_pref("browser.cache.disk.enable", false);
 /* 1003: disable memory cache
  * capacity: -1=determine dynamically (default), 0=none, n=memory capacity in kibibytes ***/
-   // user_pref("browser.cache.memory.enable", false);
-   // user_pref("browser.cache.memory.capacity", 0);
+user_pref("browser.cache.memory.enable", true);
+user_pref("browser.cache.memory.capacity", -1);
 /* 1006: disable permissions manager from writing to disk [RESTART]
  * [NOTE] This means any permission changes are session only
  * [1] https://bugzilla.mozilla.org/967812 ***/
@@ -1568,7 +1568,7 @@ user_pref("ui.prefersReducedMotion", 0); // [HIDDEN PREF]
 // FF64+
 // 4615: [2516] disable PointerEvents
    // [1] https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
-user_pref("dom.w3c_pointer_events.enabled", false);
+user_pref("dom.w3c_pointer_events.enabled", true);
 // * * * /
 // FF67+
 // 4616: [2618] disable exposure of system colors to CSS or canvas [FF44+]
@@ -1648,7 +1648,16 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68
       // [SETTING] General>Browsing>Recommend features as you browse
    // user_pref("network.manage-offline-status", false); // see bugzilla 620472
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
-
+/* More custom stuff, might be deprecated already, too lazy to check ***/
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.filesystem_reported", 1);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.disk.smart_size.use_old_max", false);
+user_pref("browser.cache.disk_cache_ssl", false);
+user_pref("full-screen-api.approval-required", false);
+user_pref("full-screen-api.transition-duration.enter", "0 0");
+user_pref("full-screen-api.transition-duration.leave", "0 0");
 /*** [SECTION 9999]: DEPRECATED / REMOVED / LEGACY / RENAMED
      Documentation denoted as [-]. Items deprecated in FF78 or earlier have been archived at [1],
      which also provides a link-clickable, viewer-friendly version of the deprecated bugzilla tickets

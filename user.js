@@ -1459,7 +1459,7 @@ user_pref("_user.js.parrot", "4500 syntax error: the parrot's popped 'is clogs")
  * [SETUP-WEB] RFP can cause the odd website to break in strange ways, and has a few side affects,
  * but is largely robust nowadays. Give it a try. Your choice. Also see 4504 (letterboxing).
  * [1] https://bugzilla.mozilla.org/418986 ***/
-user_pref("privacy.resistFingerprinting", false);
+user_pref("privacy.resistFingerprinting", true);
 /* 4502: set new window sizes to round to hundreds [FF55+] [SETUP-CHROME]
  * Width will round down to multiples of 200s and height to 100s, to fit your screen.
  * The override values are a starting point to round from if you want some control

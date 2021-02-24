@@ -1483,7 +1483,7 @@ user_pref("ui.prefersReducedMotion", 1); // [HIDDEN PREF]***/
      [WARNING] Do NOT use prefs in this section with RFP as they can interfere
 ***/
 user_pref("_user.js.parrot", "4600 syntax error: the parrot's crossed the Jordan");
-// [SETUP-non-RFP] Non-RFP users replace the * with a slash on this line to enable these
+/* [SETUP-non-RFP] Non-RFP users replace the * with a slash on this line to enable these
 // FF55+
 // 4601: [2514] spoof (or limit?) number of CPU cores [FF48+]
    // [NOTE] *may* affect core chrome/Firefox performance, will affect content.

@@ -1,7 +1,7 @@
 /***
  This will reset the preferences that have been removed completely from the arkenfox user.js.
 
- Last updated: 01-Feb-2021
+ Last updated: 03-Apr-2021
 
  For instructions see:
  https://github.com/arkenfox/user.js/wiki/3.1-Resetting-Inactive-Prefs-[Scripts]
@@ -9,7 +9,7 @@
  
 (function() {
   let ops = [
-    /* removed in arkenfox user.js v52-57 */
+    /* removed in arkenfox user.js */
     /* 52-alpha */
     'browser.search.reset.enabled',
     'browser.search.reset.whitelist',
@@ -26,7 +26,6 @@
     'extensions.pocket.api', // covered by extensions.pocket.enabled
     'extensions.pocket.oAuthConsumerKey', // ditto
     'extensions.pocket.site', // ditto
-    /* 56-alpha: none */
     /* 57-alpha */
     'geo.wifi.xhr.timeout', // covered by geo.enabled
     'browser.search.geoip.timeout', // ditto
@@ -231,11 +230,12 @@
     'security.ssl3.dhe_rsa_aes_256_sha',
     /* 84-beta */
     'browser.newtabpage.activity-stream.asrouter.providers.snippets',
-    'layout.css.visited_links_enabled',
     /* 85-beta */
     'network.http.redirection-limit',
     /* 86-beta */
     'media.gmp-widevinecdm.visible',
+    /* 87-beta */
+    'browser.send_pings.require_same_host',
     /* reset parrot: check your open about:config after running the script */
     '_user.js.parrot'
   ]

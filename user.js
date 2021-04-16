@@ -1,7 +1,7 @@
 /******
 * name: arkenfox user.js
-* date: 04 April 2021
-* version 87
+* date: 06 April 2021
+* version 88-alpha
 * url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -386,8 +386,8 @@ user_pref("network.dns.disableIPv6", true);
 /* 0702: disable HTTP2
  * HTTP2 raises concerns with "multiplexing" and "server push", does nothing to
  * enhance privacy, and opens up a number of server-side fingerprinting opportunities.
- * [WARNING] Disabling this made sense in the past, and doesn't break anything, but HTTP2 is
- * at 40% (December 2019) and growing [5]. Don't be that one person using HTTP1.1 on HTTP2 sites
+ * [WARNING] Don't disable HTTP2. Don't be that one person using HTTP1.1 on HTTP2 sites
+ * [STATS] Over 50% of sites (April 2021) and growing [5]
  * [1] https://http2.github.io/faq/
  * [2] https://blog.scottlogic.com/2014/11/07/http-2-a-quick-look.html
  * [3] https://http2.github.io/http2-spec/#rfc.section.10.8
@@ -924,7 +924,6 @@ user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true); // [FF70
 user_pref("webgl.disabled", true);
 user_pref("webgl.enable-webgl2", false);
 /* 2012: limit WebGL ***/
-   // user_pref("webgl.min_capability_mode", true);
 user_pref("webgl.disable-fail-if-major-performance-caveat", true); // [DEFAULT: true FF86+]
 /* 2022: disable screensharing ***/
 user_pref("media.getusermedia.screensharing.enabled", false);
@@ -1433,7 +1432,7 @@ user_pref("privacy.firstparty.isolate", true);
    1217290 & 1409677 - enable fingerprinting resistance for WebGL (see 2010-12)
    1382545 - reduce fingerprinting in Animation API
    1354633 - limit MediaError.message to a whitelist
-   1382533 - enable fingerprinting resistance for Presentation API
+   1382533 & 1697680 - enable fingerprinting resistance for Presentation API (FF57-87)
       This blocks exposure of local IP Addresses via mDNS (Multicast DNS)
  FF58+
     967895 - spoof canvas and enable site permission prompt before allowing canvas data extraction
